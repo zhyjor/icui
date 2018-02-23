@@ -52,7 +52,7 @@ gulp.task('build:style', function() {
     ''
   ].join('\n');
   gulp
-    .src('src/style/weui.less', option)
+    .src('src/style/icui.less', option)
     .pipe(sourcemaps.init())
     .pipe(
       less().on('error', function(e) {

@@ -1,0 +1,30 @@
+@import "../../base/fn";
+
+.icui-panel {
+  background: #fff;
+  margin-top: 10px;
+  &:first-child {
+    margin-top: 0px;
+  }
+
+  position: relative;
+  overflow: hidden;
+  &:before {
+    .setTopLine(@icuiLineColorLight);
+  }
+
+  &:after {
+    .setBottomLine(@icuiLineColorLight)
+  }
+}
+
+.icui-panel__hd {
+  padding: 14px 15px 10px;
+  color: @icuiTextColorGray;
+  font-size: 13px;
+  position: relative;
+  &:after {
+    .setBottomLine(@icuiLineColorLight);
+    left: 15px;
+  }
+}

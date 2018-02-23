@@ -1,0 +1,68 @@
+@import "../../base/fn";
+
+.icui-cells {
+  margin-top: @icuiCellsMarginTop;
+  background-color: @icuiCellBg;
+  line-height: @icuiCellLineHeight;
+  font-size: @icuiCellFontSize; //
+
+  overflow: hidden;
+
+  position: relative;
+  &:before {
+    .setTopLine(@icuiCellBorderColor);
+    z-index: 2;
+  }
+  &:after {
+    .setBottomLine(@icuiCellBorderColor);
+    z-index: 2;
+  }
+}
+
+.icui-cells__title {
+  margin-top: .77em;
+  margin-bottom: .3em;
+  padding-left: @icuiCellGapH;
+  padding-right: @icuiCellGapH;
+  color: @icuiTextColorGray;
+  font-size: @icuiCellTipsFontSize;
+
+  & + .icui-cells {
+    margin-top: 0;
+  }
+}
+
+.icui-cells__tips {
+  margin-top: .3em; // 8px - 行高
+  color: @icuiTextColorGray;
+  padding-left: @icuiCellGapH;
+  padding-right: @icuiCellGapH;
+  font-size: @icuiCellTipsFontSize;
+}
+
+.icui-cell {
+  padding: @icuiCellGapV @icuiCellGapH;
+  position: relative; //这个是为了兼容cells容器onepx方案被before挡住而做的
+  display: flex;
+  align-items: center;
+  &:before {
+    .setTopLine(@icuiCellBorderColor);
+    left: @icuiCellGapH;
+    z-index: 2;
+  }
+  &:first-child {
+    &:before {
+      display: none;
+    }
+  }
+}
+.icui-cell_primary{
+  align-items: flex-start;
+}
+.icui-cell__bd{
+  flex: 1;
+}
+.icui-cell__ft {
+  text-align: right;
+  color: @icuiTextColorGray;
+}

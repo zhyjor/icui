@@ -2,9 +2,12 @@
   "name": "icui",
   "version": "1.0.0",
   "description": "the ui for icleaner",
-  "main": "index.js",
+  "style": "dist/style/weui.css",
+  "less": "src/style/weui.less",
+  "main": "dist/style/weui.css",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp -ws",
+    "test": "gulp release"
   },
   "repository": {
     "type": "git",
