@@ -1,0 +1,62 @@
+
+@import "../../base/fn";
+@import "icui-button_global";
+@import "icui-button_default";
+@import "icui-button_primary";
+@import "icui-button_warn";
+@import "icui-button_disabled";
+@import "icui-button_loading";
+@import "icui-button_plain";
+
+button, input {
+  &.icui-btn {
+    width: 100%;
+    border-width: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    &:focus {
+      outline: 0;
+    }
+  }
+  &.icui-btn_inline,&.icui-btn_mini {
+    width: auto;
+  }
+  &.icui-btn_plain-primary,&.icui-btn_plain-default{
+    border-width: 1px;
+    background-color: transparent;
+  }
+}
+
+.icui-btn_mini {
+  display: inline-block;
+  padding: 0 1.32em;
+  line-height: @icuiBtnMiniHeight;
+  font-size: @icuiBtnMiniFontSize;
+}
+
+
+/*gap between btn*/
+.icui-btn + .icui-btn {
+  margin-top: @icuiBtnDefaultGap;
+}
+
+.icui-btn.icui-btn_inline + .icui-btn.icui-btn_inline {
+  margin-top: auto;
+  margin-left: @icuiBtnDefaultGap;
+}
+
+.icui-btn-area {
+  margin: @icuiCellsMarginTop @icuiBtnDefaultGap .3em;
+}
+.icui-btn-area_inline {
+  display: flex;
+  .icui-btn {
+    margin-top: auto;
+    margin-right: @icuiBtnDefaultGap;
+    width: 100%;
+    flex: 1;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

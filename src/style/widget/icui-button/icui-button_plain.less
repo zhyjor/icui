@@ -1,0 +1,30 @@
+
+@import "../../base/fn";
+
+.icui-btn_plain-primary {
+  color: @icuiBtnPlainPrimaryColor;
+  border: 1px solid @icuiBtnPlainPrimaryBorderColor;
+  &:not(.icui-btn_plain-disabled):active {
+    color:@icuiBtnPlainPrimaryActiveColor;
+    border-color: @icuiBtnPlainPrimaryActiveBorderColor;
+  }
+  &:after {
+    border-width: 0;
+  }
+}
+
+.icui-btn_plain-default {
+  color: @icuiBtnPlainDefaultColor;
+  border: 1px solid @icuiBtnPlainDefaultBorderColor;
+  &:not(.icui-btn_plain-disabled):active {
+    color:@icuiBtnPlainDefaultActiveColor;
+    border-color: @icuiBtnPlainDefaultActiveBorderColor;
+  }
+  &:after {
+    border-width: 0;
+  }
+}
+.icui-btn_plain-disabled{
+  color:rgba(0,0,0,.2);
+  border-color:rgba(0,0,0,.2);
+}

@@ -1,0 +1,13 @@
+
+@import "../../base/fn";
+
+.icui-btn_warn {
+  background-color: @icuiBtnWarnBg;
+  &:not(.icui-btn_disabled):visited {
+    color: @icuiBtnFontColor;
+  }
+  &:not(.icui-btn_disabled):active {
+    color: @icuiBtnActiveFontColor;
+    background-color: @icuiBtnWarnActiveBg;
+  }
+}
